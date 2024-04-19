@@ -1,7 +1,7 @@
 /********** Template CSS **********/
 :root {
-    --primary: #6244C5;
-    --secondary: #FFC448;
+    --primary: #a99fcb;
+    --secondary: #810e36;
     --light: #FAFAFB;
     --dark: #12141D;
 }
@@ -153,7 +153,7 @@
     display: block;
     width: 60px;
     height: 60px;
-    background: #FFFFFF;
+    background: hsl(0, 76%, 15%);
     border-radius: 100%;
     transition: all 200ms;
 }
