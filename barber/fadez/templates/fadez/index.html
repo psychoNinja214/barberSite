@@ -63,20 +63,25 @@
     <!-- Navbar End -->
 
 
-    <!-- Header Start -->
-    <div class="container-fluid bg-dark my-6 mt-0">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-2 py-6 pb-0 pt-lg-0">
-                    
-
-                </div>
-                <div class="col-lg-10" id="home">
-                    <img class="img-fluid" src="{% static 'img/barberShop.jpg' %}">
-                </div>
-            </div>
-        </div>
+    <!-- Header Start -->}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        #home {
+            position: relative;
+            top: 10%; /* Adjust this value as needed */
+            width: 70%; /* Adjust width as needed */
+            height: 100%; /* Adjust height as needed */
+            z-index: 0; /* Ensure the stacking context is correct */
+            background: url("{% static 'img/barberShop.jpg' %}") no-repeat top left; /* Ensure correct image path */
+            background-size: 80%; /* Set the size of the background image */
+        }
+    </style>
+</head>
+<body>
+    <div id="home">
+        <img src="{% static 'img/logo.jpg' %}" alt="Logo" class="logo">
     </div>
+</body>
     <!-- Header End -->
 
 
