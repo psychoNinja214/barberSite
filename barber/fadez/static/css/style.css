@@ -105,10 +105,10 @@
 /*** Header ***/
 #home {
     position: relative;
-    top: 20%;
-    left: 10%;
-    background: url(../img/logo.jpg) left top no-repeat;
-    background-size: 400px 500px;
+    background: url(../img/logo.jpg) no-repeat;
+    background-position-x: 20%;
+    background-position-y: 100%;
+    background-size: 20% 20%;
 }
 
 .typed-cursor {
