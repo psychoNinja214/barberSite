@@ -110,13 +110,6 @@ body, html {
     width: 100%;
 }
 
-#home {
-    position: relative;
-    top: 20%; /* Adjust this value as needed */
-    width: 100%; /* Adjust width as needed */
-    height: 100%; /* Adjust height as needed */
-    z-index: 0; /* Ensure the stacking context is correct */
-}
 
 
 {% load static %}
@@ -131,12 +124,12 @@ body, html {
     background: src="{% static 'img/logo.jpg' %}" no-repeat top left; /* Ensure correct image path */
     background-size: 400px 500px; /* Set the size of the background image */
     opacity: 0.5; /* Set the desired opacity value */
-    z-index: -1; /* Ensure the background stays behind the content */
+    z-index: 1; /* Ensure the background stays behind the content */
     pointer-events: none; /* Prevent interaction with the pseudo-element */
 }
 
 .logo {
-    position: absolute;
+    position: relative;
     top: 10px; /* Adjust as needed */
     left: 10px; /* Adjust as needed */
     width: 100px; /* Adjust size as needed */
