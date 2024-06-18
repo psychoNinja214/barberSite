@@ -78,6 +78,18 @@
 
 
 /*** Navbar ***/
+.logo-img {
+    height: 50px; /* Adjust height as needed */
+    width: auto;
+}
+
+/* Ensures the logo is not too large on mobile */
+@media (max-width: 767.98px) {
+    .navbar-brand .logo-img {
+        height: 40px; /* Adjust height as needed */
+    }
+}
+
 .navbar.fixed-top {
     display: position;
     transition: .5s;
@@ -99,6 +111,24 @@
     .navbar .navbar-nav .nav-link  {
         padding: 10px 0;
     }
+
+/* Flex container for the logo and text */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Adjustments for the logo image */
+.logo-img {
+    max-height: 50px; /* Adjust this value as needed */
+    margin-right: 10px; /* Space between the logo and the text */
+}
+
+/* Adjustments for the h1 text */
+.logo-text {
+    font-size: 1.5rem; /* Adjust font size as needed */
+}
+
 }
 
 
