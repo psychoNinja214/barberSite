@@ -78,6 +78,18 @@
 
 
 /*** Navbar ***/
+.logo-img {
+    height: 50px; /* Adjust height as needed */
+    width: auto;
+}
+
+/* Ensures the logo is not too large on mobile */
+@media (max-width: 767.98px) {
+    .navbar-brand .logo-img {
+        height: 40px; /* Adjust height as needed */
+    }
+}
+
 .navbar.fixed-top {
     display: position;
     transition: .5s;
@@ -99,18 +111,61 @@
     .navbar .navbar-nav .nav-link  {
         padding: 10px 0;
     }
+
+/* Flex container for the logo and text */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Adjustments for the logo image */
+.logo-img {
+    max-height: 50px; /* Adjust this value as needed */
+    margin-right: 10px; /* Space between the logo and the text */
+}
+
+/* Adjustments for the h1 text */
+.logo-text {
+    font-size: 1.5rem; /* Adjust font size as needed */
+}
+
 }
 
 
 /*** Header ***/
-#home {
-    position: relative;
-    background: url(../img/logo.jpg) no-repeat;
-    background-position-x: 20%;
-    background-position-y: 100%;
-    background-size: 20% 20%;
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
 }
 
+
+
+{% load static %}
+
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: src="{% static 'img/logo.jpg' %}" no-repeat top left; /* Ensure correct image path */
+    background-size: 400px 500px; /* Set the size of the background image */
+    opacity: 0.5; /* Set the desired opacity value */
+    z-index: 1; /* Ensure the background stays behind the content */
+    pointer-events: none; /* Prevent interaction with the pseudo-element */
+}
+
+.logo {
+    position: relative;
+    top: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    width: 100px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1; /* Ensure the logo appears above the background image */
+}
 .typed-cursor {
     font-size: 60px;
     color: var(--dark);
